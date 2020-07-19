@@ -262,11 +262,8 @@ open class RAMAnimatedTabBarController: UITabBarController {
             currentContainer?.backgroundColor = items[currentIndex].bgSelectedColor
 
             selectedIndex = index
-        } else {
-            if let navVC = viewControllers?[selectedIndex] as? UINavigationController {
-                navVC.popToRootViewController(animated: true)
-            }
         }
+
         delegate?.tabBarController?(self, didSelect: controller)
     }
 }
